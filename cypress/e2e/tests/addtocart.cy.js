@@ -40,16 +40,25 @@ it('Add multiple items to cart', () => {
 
 })
 
-it('Add an item to cart from the product details page', () => {
+it.only('Add an item to cart from the product details page', () => {
 
 	// Login with valid credentials
 	cy.get('#signInOrRegister').should('be.visible')
 	cy.get('#signInOrRegister').click()
 	Authentication.login('marsenal2@yopmail.com', 'Password123!')
 
-	//Add a product to cart
+	//Select a product to view
+	cy.get (AddToCart.mugDetails).click()
+	cy.url().should('contain', 'quality-mug')
+
+	//Add the product to cart
+  cy.get(AddToCart.mugAddToCart).should('be.visible')
+	   cy.wait(1500)
+	cy.get(AddToCart.mugAddToCart).click()
+	cy.get(AddToCart.cartSummary).should('be.visible')
+	cy.get(AddToCart.cartSummary).should('have.text',' Cart summary ')
 
 
-
+   })
 
 })

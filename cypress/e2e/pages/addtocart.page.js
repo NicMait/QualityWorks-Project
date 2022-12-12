@@ -6,6 +6,8 @@ class AddToCart{
 	get cartSummary () {return ('.snipcart-cart-header__title')}
 	get cartTotal () { return ('.snipcart-summary-fees__amount.snipcart-summary-fees__amount--highlight.snipcart__font--large')}
 	get backToShopping () { return ('.snipcart-modal__close-title')}
+	get mugDetails () { return ('.chakra-image.css-2i84d9[src="/images/quality-mug.jpg"]')}
+	get mugAddToCart () { return ('#add-to-cart')}
 
 
  addToCart(){
@@ -24,7 +26,5 @@ class AddToCart{
 }
 
 }
-
-
 
 export default new AddToCart()
