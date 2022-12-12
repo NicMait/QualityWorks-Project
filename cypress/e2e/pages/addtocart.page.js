@@ -21,7 +21,6 @@ class AddToCart{
 	cy.get(this.jeansAddToCart).click()
 
 
-
 }
 
 }

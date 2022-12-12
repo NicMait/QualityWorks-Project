@@ -7,7 +7,7 @@ describe('Add To Cart', () => {
 			cy.visit('/')
 		})
 
-	it.skip('Add a single item to cart', () => {
+	it('Add a single item to cart', () => {
 
 			// Login with valid credentials
 			cy.get('#signInOrRegister').should('be.visible')
@@ -39,6 +39,15 @@ it('Add multiple items to cart', () => {
 	cy.get(AddToCart.cartSummary).should('have.text',' Cart summary ')
 
 })
+
+it('Add an item to cart from the product details page', () => {
+
+	// Login with valid credentials
+	cy.get('#signInOrRegister').should('be.visible')
+	cy.get('#signInOrRegister').click()
+	Authentication.login('marsenal2@yopmail.com', 'Password123!')
+
+	//Add a product to cart
 
 
 
