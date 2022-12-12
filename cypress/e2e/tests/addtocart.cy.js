@@ -40,7 +40,7 @@ it('Add multiple items to cart', () => {
 
 })
 
-it.only('Add an item to cart from the product details page', () => {
+it('Add an item to cart from the product details page', () => {
 
 	// Login with valid credentials
 	cy.get('#signInOrRegister').should('be.visible')
