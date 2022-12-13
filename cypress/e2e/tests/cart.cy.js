@@ -1,4 +1,5 @@
 import Authentication from '../pages/authentication.page'
+import Cart from '../pages/cart.page'
 
 describe('Authentication', () => {
 	beforeEach(() => {
