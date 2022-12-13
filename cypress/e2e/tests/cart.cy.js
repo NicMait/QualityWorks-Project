@@ -46,6 +46,7 @@ describe('Cart', () => {
 
 	// Remove a product from the cart
     cy.get(Cart.deleteProduct).click()
+		cy.get(Gallery.cartQuantity).should('have.text'," 2 ")
 
 
 
