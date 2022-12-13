@@ -6,6 +6,7 @@ class Gallery{
 	get clickArea () { return ('#product-5 > .css-n21gh5 > .css-46p1lt')}
 	get hoodyAddToCart () { return ('#product-5 > #add-to-cart')}
 	get cartQuantity () { return ('.snipcart-cart-header__option')}
+	get logOut () { return ('#top-sign-out')}
 
 }
 

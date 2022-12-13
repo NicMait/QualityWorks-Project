@@ -10,7 +10,7 @@ describe('Add To Cart', () => {
 			cy.visit('/')
 		})
 
-	it.skip('View Product Details', () => {
+	it('View Product Details', () => {
 
 			// Login with valid credentials
 			cy.get('#signInOrRegister').should('be.visible')
@@ -45,8 +45,18 @@ it('Increase Product Quantity', () => {
 	cy.get(Gallery.cartQuantity).should('have.text'," 2 ")
 })
 
+it.only('Sign out from the home page', () => {
+
+	// Login with valid credentials
+	cy.get('#signInOrRegister').should('be.visible')
+	cy.get('#signInOrRegister').click()
+	Authentication.login('marsenal2@yopmail.com', 'Password123!')
+
+	//Sign out from the home page/product gallery
+  cy.get(Gallery.logOut).should('be.visible')
+	cy.get(Gallery.logOut).click()
+	cy.get(Authentication.signInRegisterBtn).should('be.visible')
 
 
-
-
+  })
 })
