@@ -1,6 +1,6 @@
 class AddToCart{
 
-	get heelsAddToCart () { return (':nth-child(16) > #add-to-cart')}
+	get heelsAddToCart () { return ('div:nth-child(16) > #add-to-cart')}
   get jeansAddToCart () { return (' div:nth-child(2) > div:nth-child(3) > div:nth-child(13) > button:nth-child(3)')}
 	get cart () { return ('.snipcart-cart__content')}
 	get cartSummary () {return ('.snipcart-cart-header__title')}
