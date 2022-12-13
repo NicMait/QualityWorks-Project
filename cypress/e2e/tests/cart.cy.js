@@ -1,4 +1,5 @@
 import Authentication from '../pages/authentication.page'
+import AddToCart from '../pages/addtocart.page'
 import Cart from '../pages/cart.page'
 
 describe('Authentication', () => {
@@ -16,6 +17,11 @@ describe('Authentication', () => {
 			//Add products to the cart
 			AddToCart.addToCart()
 			AddToCart.addToCartTwo()
+
+			//Navigate to cart
+			cy.get(Cart.cartBtn).should('be.visible')
+			cy.get(Cart.cartBtn).click()
+
 	})
 
 	})
