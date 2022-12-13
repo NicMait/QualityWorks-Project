@@ -14,6 +14,8 @@ describe('Authentication', () => {
       Authentication.login('marsenal2@yopmail.com', 'Password123!')
 
 			//Add products to the cart
-			
+			AddToCart.addToCart()
+			AddToCart.addToCartTwo()
+	})
 
 	})
