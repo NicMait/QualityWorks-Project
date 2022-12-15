@@ -52,8 +52,7 @@ describe('Cart', () => {
 	})
 
 
-
-	it('Increase the quantity of the product from the cart', () => {
+	it('Increase the quantity of the product in the cart', () => {
 
 		// Login with valid credentials
 		cy.get('#signInOrRegister').should('be.visible')
@@ -77,4 +76,4 @@ describe('Cart', () => {
 
 	})
 
-	})
+})

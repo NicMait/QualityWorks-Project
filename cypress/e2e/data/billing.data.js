@@ -11,7 +11,6 @@ module.exports = {
 	},
 	missingemail: {
 		   fullname: 'Olivier Giroud',
-			 email: '',
 			 streetaddress: 'Rue de Sources',
 			 Apt:'18',
 			 City:'Lachy',
@@ -20,14 +19,13 @@ module.exports = {
 			 ZipCode:'51120'
 	},
 	missingname: {
-		   fullname: '',
 			 email: 'marsenal2@yopmail.com',
 			 streetaddress: 'Stonechat Street',
 			 Apt:'1770',
 			 City:'Windhoek',
 			 Country:'Namibia',
 			 Province:'Oshana',
-			 ZipCode:'485'
+			 ZipCode:'485344'
 
 
 	},
@@ -39,7 +37,6 @@ module.exports = {
 			 City:'Boucatu',
 			 Country:'Brazil',
 			 Province:'Sao Paulo',
-			 ZipCode:''
 
 	}
 

@@ -7,7 +7,7 @@ describe('Authentication', () => {
 		})
 
 	const email = faker.internet.email();
-	it('Register a new user with email', () => {
+	it('Should register a new user with email', () => {
 			// Register using email
 
 			cy.get('#signInOrRegister').should('be.visible')
@@ -22,7 +22,7 @@ describe('Authentication', () => {
 			cy.get (Authentication.banner).should('have.text', "Products")
 	})
 
-it('Register with invalid email address', () => {
+it('Should throw an error for invalid email address', () => {
 
 			cy.get('#signInOrRegister').should('be.visible')
 			cy.get('#signInOrRegister').click()
@@ -37,7 +37,7 @@ it('Register with invalid email address', () => {
 
   })
 
-	it('Register with invalid password', () => {
+	it('Should throw an error when you register with invalid password', () => {
 
 		cy.get('#signInOrRegister').should('be.visible')
 		cy.get('#signInOrRegister').click()

@@ -24,7 +24,7 @@ describe('Add To Cart', () => {
 
 })
 
-it('Increase Product Quantity', () => {
+it('Should increase the quantity of a product', () => {
 
 	// Login with valid credentials
 	cy.get('#signInOrRegister').should('be.visible')
@@ -45,7 +45,7 @@ it('Increase Product Quantity', () => {
 	cy.get(Gallery.cartQuantity).should('have.text'," 2 ")
 })
 
-it.only('Sign out from the home page', () => {
+it ('Should sign out from the product gallery page', () => {
 
 	// Login with valid credentials
 	cy.get('#signInOrRegister').should('be.visible')
