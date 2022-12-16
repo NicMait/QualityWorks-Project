@@ -7,7 +7,7 @@ describe('Product Details', () => {
 			cy.visit('/')
 		})
 
-	it('Navigate to a related product', () => {
+	it.only('Navigate to a related product', () => {
 			// Login with valid credentials
       cy.get(Authentication.signInRegisterBtn).should('be.visible')
 			cy.get(Authentication.signInRegisterBtn).click()
@@ -72,10 +72,7 @@ describe('Product Details', () => {
 		 cy.get(Details.productIncrease).click()
 		 cy
 
-
-
-
-})
+   })
 
 
 
