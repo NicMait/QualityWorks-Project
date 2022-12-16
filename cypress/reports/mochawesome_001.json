@@ -1,6 +1,16 @@
 {
   "stats": {
     "suites": 1,
+<<<<<<< HEAD
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-13T01:32:53.356Z",
+    "end": "2022-12-13T01:33:11.633Z",
+    "duration": 18277,
+    "testsRegistered": 1,
+=======
     "tests": 3,
     "passes": 3,
     "pending": 0,
@@ -9,6 +19,7 @@
     "end": "2022-12-12T15:42:28.468Z",
     "duration": 18745,
     "testsRegistered": 3,
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,16 +29,27 @@
   },
   "results": [
     {
+<<<<<<< HEAD
+      "uuid": "622907ec-99e5-425d-a121-2a450bff5d6d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\cart.cy.js",
+      "file": "cypress\\e2e\\tests\\cart.cy.js",
+=======
       "uuid": "0b32b9c4-bd10-4455-b8bb-574a0fde0802",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\registration.cy.js",
       "file": "cypress\\e2e\\tests\\registration.cy.js",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
+          "uuid": "bbdce195-1995-4afa-8f76-3590cc05fc22",
+=======
           "uuid": "d2d2457a-2ece-4b91-88d6-b44a51eaa16b",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
           "title": "Authentication",
           "fullFile": "",
           "file": "",
@@ -35,16 +57,29 @@
           "afterHooks": [],
           "tests": [
             {
+<<<<<<< HEAD
+              "title": "View products in cart",
+              "fullTitle": "Authentication View products in cart",
+              "timedOut": null,
+              "duration": 18109,
+=======
               "title": "Register a new user with email",
               "fullTitle": "Authentication Register a new user with email",
               "timedOut": null,
               "duration": 10276,
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
+<<<<<<< HEAD
+              "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Add products to the cart\n\n_addtocart.default.addToCart();\ncy.get(_addtocart.default.backToShopping).should('be.visible');\ncy.get(_addtocart.default.backToShopping).click();\n_addtocart.default.addToCartTwo();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');\ncy.get(_addtocart.default.backToShopping).should('be.visible');\ncy.get(_addtocart.default.backToShopping).click(); //Navigate to cart\n_cart.default.cartDetails();",
+              "err": {},
+              "uuid": "0372f1b1-d4d1-487b-8821-659b3f8ca673",
+              "parentUUID": "bbdce195-1995-4afa-8f76-3590cc05fc22",
+=======
               "code": "// Register using email\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\ncy.get(_authentication.default.signUp).should('be.visible');\ncy.get(_authentication.default.signUp).click();\ncy.get('[type=email]').type(email);\ncy.get('[type=password]').type('Password123!');\ncy.get(_authentication.default.submitBtn).should('be.visible');\ncy.get(_authentication.default.submitBtn).click();\ncy.get(_authentication.default.banner).should('be.visible');\ncy.get(_authentication.default.banner).should('have.text', \"Products\");",
               "err": {},
               "uuid": "84897f0d-41a4-4395-9590-dc8063844e11",
@@ -85,20 +120,29 @@
               "err": {},
               "uuid": "1860b794-8882-48ef-8e0c-58ca5f204e80",
               "parentUUID": "d2d2457a-2ece-4b91-88d6-b44a51eaa16b",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
+            "0372f1b1-d4d1-487b-8821-659b3f8ca673"
+=======
             "84897f0d-41a4-4395-9590-dc8063844e11",
             "747bfae9-c392-4849-a7de-297255e79df9",
             "1860b794-8882-48ef-8e0c-58ca5f204e80"
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
+<<<<<<< HEAD
+          "duration": 18109,
+=======
           "duration": 18572,
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

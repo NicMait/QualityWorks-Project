@@ -1,6 +1,26 @@
 {
   "stats": {
     "suites": 1,
+<<<<<<< HEAD
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-13T01:31:55.106Z",
+    "end": "2022-12-13T01:32:41.775Z",
+    "duration": 46669,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "faac1d2d-7628-4c77-99ea-3590e8e730f8",
+=======
     "tests": 1,
     "passes": 1,
     "pending": 1,
@@ -19,6 +39,7 @@
   "results": [
     {
       "uuid": "a60a0ecc-49f5-4866-9e2b-a1d52a6d6361",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\addtocart.cy.js",
       "file": "cypress\\e2e\\tests\\addtocart.cy.js",
@@ -27,7 +48,11 @@
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
+          "uuid": "bc12defe-3823-49c1-a721-85817e53c101",
+=======
           "uuid": "0c666cbf-a07c-4b7f-9b81-2ebd0edfcab5",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
           "title": "Add To Cart",
           "fullFile": "",
           "file": "",
@@ -38,6 +63,25 @@
               "title": "Add a single item to cart",
               "fullTitle": "Add To Cart Add a single item to cart",
               "timedOut": null,
+<<<<<<< HEAD
+              "duration": 20142,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Add a product to cart\n\n_addtocart.default.addToCart();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.snipcart-cart-header__title`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.snipcart-cart-header__title`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/tests/addtocart.cy.js:19:33)",
+                "diff": null
+              },
+              "uuid": "91ad84e8-ad50-4c75-a48f-ee3045720308",
+              "parentUUID": "bc12defe-3823-49c1-a721-85817e53c101",
+              "isHook": false,
+              "skipped": false
+=======
               "duration": 0,
               "state": "pending",
               "speed": null,
@@ -51,12 +95,17 @@
               "parentUUID": "0c666cbf-a07c-4b7f-9b81-2ebd0edfcab5",
               "isHook": false,
               "skipped": true
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
             },
             {
               "title": "Add multiple items to cart",
               "fullTitle": "Add To Cart Add multiple items to cart",
               "timedOut": null,
+<<<<<<< HEAD
+              "duration": 14550,
+=======
               "duration": 17420,
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,14 +114,48 @@
               "context": null,
               "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Add a product to cart\n\n_addtocart.default.addToCart();\ncy.get(_addtocart.default.backToShopping).should('be.visible');\ncy.get(_addtocart.default.backToShopping).click(); //Add another item to cart\n_addtocart.default.addToCartTwo();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
               "err": {},
+<<<<<<< HEAD
+              "uuid": "9be2b796-9e16-45ad-b443-b4470ec4ee08",
+              "parentUUID": "bc12defe-3823-49c1-a721-85817e53c101",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add an item to cart from the product details page",
+              "fullTitle": "Add To Cart Add an item to cart from the product details page",
+              "timedOut": null,
+              "duration": 11436,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Select a product to view\n\ncy.get(_addtocart.default.mugDetails).click();\ncy.url().should('contain', 'quality-mug'); //Add the product to cart\ncy.get(_addtocart.default.mugAddToCart).should('be.visible');\ncy.wait(1500);\ncy.get(_addtocart.default.mugAddToCart).click();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
+              "err": {},
+              "uuid": "2ae2f3e6-e97a-476f-b21d-05fd70d94d52",
+              "parentUUID": "bc12defe-3823-49c1-a721-85817e53c101",
+=======
               "uuid": "446f9192-f745-471a-b2ee-fa5b692fc7c1",
               "parentUUID": "0c666cbf-a07c-4b7f-9b81-2ebd0edfcab5",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
+            "9be2b796-9e16-45ad-b443-b4470ec4ee08",
+            "2ae2f3e6-e97a-476f-b21d-05fd70d94d52"
+          ],
+          "failures": [
+            "91ad84e8-ad50-4c75-a48f-ee3045720308"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 46128,
+=======
             "446f9192-f745-471a-b2ee-fa5b692fc7c1"
           ],
           "failures": [],
@@ -81,6 +164,7 @@
             "1bab44b7-ce60-4cbe-bba1-ab062b39ea2d"
           ],
           "duration": 17420,
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

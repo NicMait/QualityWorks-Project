@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-16T00:26:09.425Z",
+    "end": "2022-12-16T00:26:48.556Z",
+    "duration": 39131,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1b5b25f3-60e6-4e6a-9e2b-8b65d9571cea",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\addtocart.cy.js",
+      "file": "cypress\\e2e\\tests\\addtocart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05c3b51a-6319-4945-bac1-5c62c33931fb",
+          "title": "Add To Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a single item to cart",
+              "fullTitle": "Add To Cart Add a single item to cart",
+              "timedOut": null,
+              "duration": 14949,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Add a product to cart\n\n_addtocart.default.addToCart();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
+              "err": {},
+              "uuid": "f0cceb34-83a8-4992-b11d-704093234226",
+              "parentUUID": "05c3b51a-6319-4945-bac1-5c62c33931fb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add multiple items to cart",
+              "fullTitle": "Add To Cart Add multiple items to cart",
+              "timedOut": null,
+              "duration": 12613,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Add a product to cart\n\n_addtocart.default.addToCart();\ncy.get(_addtocart.default.backToShopping).should('be.visible');\ncy.get(_addtocart.default.backToShopping).click(); //Add another item to cart\n_addtocart.default.addToCartTwo();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
+              "err": {},
+              "uuid": "d1c5b8b3-018a-4372-b812-2682605319b3",
+              "parentUUID": "05c3b51a-6319-4945-bac1-5c62c33931fb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add an item to cart from the product details page",
+              "fullTitle": "Add To Cart Add an item to cart from the product details page",
+              "timedOut": null,
+              "duration": 11117,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Select a product to view\n\ncy.get(_addtocart.default.mugDetails).click();\ncy.url().should('contain', 'quality-mug'); //Add the product to cart\ncy.get(_addtocart.default.mugAddToCart).should('be.visible');\ncy.wait(1500);\ncy.get(_addtocart.default.mugAddToCart).click();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
+              "err": {},
+              "uuid": "677e2f06-84ca-4302-ac52-ce69310c3810",
+              "parentUUID": "05c3b51a-6319-4945-bac1-5c62c33931fb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f0cceb34-83a8-4992-b11d-704093234226",
+            "d1c5b8b3-018a-4372-b812-2682605319b3",
+            "677e2f06-84ca-4302-ac52-ce69310c3810"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38679,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
