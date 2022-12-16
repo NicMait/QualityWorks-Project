@@ -1,6 +1,7 @@
 class Contact{
 
 	get contactBtn () { return ('#top-contact')}
+	get messageHeader () { return ('.chakra-heading.css-z59od')}
 	get firstName () { return ('#firstName')}
 	get lastName () { return ('#lastName')}
 	get emailAddress () { return ('#email')}

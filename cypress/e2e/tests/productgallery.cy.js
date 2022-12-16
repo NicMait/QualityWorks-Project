@@ -24,11 +24,7 @@ describe('Add To Cart', () => {
 
 })
 
-<<<<<<< HEAD
 it('Should increase the quantity of a product', () => {
-=======
-it('Increase Product Quantity', () => {
->>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
 
 	// Login with valid credentials
 	cy.get('#signInOrRegister').should('be.visible')
