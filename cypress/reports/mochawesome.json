@@ -1,6 +1,7 @@
 {
   "stats": {
     "suites": 1,
+<<<<<<< HEAD
     "tests": 3,
     "passes": 2,
     "pending": 0,
@@ -19,6 +20,26 @@
   "results": [
     {
       "uuid": "faac1d2d-7628-4c77-99ea-3590e8e730f8",
+=======
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2022-12-12T15:41:37.883Z",
+    "end": "2022-12-12T15:41:55.452Z",
+    "duration": 17569,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "a60a0ecc-49f5-4866-9e2b-a1d52a6d6361",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\addtocart.cy.js",
       "file": "cypress\\e2e\\tests\\addtocart.cy.js",
@@ -27,7 +48,11 @@
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
           "uuid": "bc12defe-3823-49c1-a721-85817e53c101",
+=======
+          "uuid": "0c666cbf-a07c-4b7f-9b81-2ebd0edfcab5",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
           "title": "Add To Cart",
           "fullFile": "",
           "file": "",
@@ -38,6 +63,7 @@
               "title": "Add a single item to cart",
               "fullTitle": "Add To Cart Add a single item to cart",
               "timedOut": null,
+<<<<<<< HEAD
               "duration": 20142,
               "state": "failed",
               "speed": null,
@@ -55,12 +81,31 @@
               "parentUUID": "bc12defe-3823-49c1-a721-85817e53c101",
               "isHook": false,
               "skipped": false
+=======
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Add a product to cart\n\n_addtocart.default.addToCart();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
+              "err": {},
+              "uuid": "1bab44b7-ce60-4cbe-bba1-ab062b39ea2d",
+              "parentUUID": "0c666cbf-a07c-4b7f-9b81-2ebd0edfcab5",
+              "isHook": false,
+              "skipped": true
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
             },
             {
               "title": "Add multiple items to cart",
               "fullTitle": "Add To Cart Add multiple items to cart",
               "timedOut": null,
+<<<<<<< HEAD
               "duration": 14550,
+=======
+              "duration": 17420,
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -69,6 +114,7 @@
               "context": null,
               "code": "// Login with valid credentials\ncy.get('#signInOrRegister').should('be.visible');\ncy.get('#signInOrRegister').click();\n_authentication.default.login('marsenal2@yopmail.com', 'Password123!'); //Add a product to cart\n\n_addtocart.default.addToCart();\ncy.get(_addtocart.default.backToShopping).should('be.visible');\ncy.get(_addtocart.default.backToShopping).click(); //Add another item to cart\n_addtocart.default.addToCartTwo();\ncy.get(_addtocart.default.cartSummary).should('be.visible');\ncy.get(_addtocart.default.cartSummary).should('have.text', ' Cart summary ');",
               "err": {},
+<<<<<<< HEAD
               "uuid": "9be2b796-9e16-45ad-b443-b4470ec4ee08",
               "parentUUID": "bc12defe-3823-49c1-a721-85817e53c101",
               "isHook": false,
@@ -89,12 +135,17 @@
               "err": {},
               "uuid": "2ae2f3e6-e97a-476f-b21d-05fd70d94d52",
               "parentUUID": "bc12defe-3823-49c1-a721-85817e53c101",
+=======
+              "uuid": "446f9192-f745-471a-b2ee-fa5b692fc7c1",
+              "parentUUID": "0c666cbf-a07c-4b7f-9b81-2ebd0edfcab5",
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
+<<<<<<< HEAD
             "9be2b796-9e16-45ad-b443-b4470ec4ee08",
             "2ae2f3e6-e97a-476f-b21d-05fd70d94d52"
           ],
@@ -104,6 +155,16 @@
           "pending": [],
           "skipped": [],
           "duration": 46128,
+=======
+            "446f9192-f745-471a-b2ee-fa5b692fc7c1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "1bab44b7-ce60-4cbe-bba1-ab062b39ea2d"
+          ],
+          "duration": 17420,
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

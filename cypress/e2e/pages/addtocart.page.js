@@ -10,6 +10,10 @@ class AddToCart{
 	get mugAddToCart () { return ('#add-to-cart')}
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
  addToCart(){
  cy.get(this.heelsAddToCart).scrollIntoView()
      cy.wait(1500)
