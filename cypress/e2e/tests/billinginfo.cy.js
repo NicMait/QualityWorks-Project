@@ -73,7 +73,6 @@ describe('Data Driven Billing Information', () => {
 		cy.get(Checkout.checkoutBtn).click()
 
 		//Enter billing information without full name
-		// cy.get(Checkout.fullName).type(BillingData.missingname.fullname)
 		cy.get(Checkout.emailAddress).type(BillingData.missingname.email)
 		cy.get(Checkout.streetAddress).type(BillingData.missingname.streetaddress)
 		cy.get(Checkout.aptNumber).type(BillingData.missingname.Apt)
@@ -82,8 +81,7 @@ describe('Data Driven Billing Information', () => {
 		cy.get(Checkout.province).type(BillingData.missingname.Province)
 		cy.get(Checkout.zipCode).type(BillingData.missingname.ZipCode)
 		cy.get(Checkout.paymentBtn).click({force:true})
-		// cy.get(Checkout.emailError).scrollIntoView()
-		// cy.get(Checkout.emailError).should('be.visible')
+
 
     })
 

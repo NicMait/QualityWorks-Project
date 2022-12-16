@@ -5,7 +5,7 @@ describe('Authentication', () => {
 			cy.visit('/')
 		})
 
-	it('Login valid user', () => {
+	it('Should log in a valid user', () => {
 			// Login with valid credentials
 			cy.get('#signInOrRegister').should('be.visible')
 			cy.get('#signInOrRegister').click()
