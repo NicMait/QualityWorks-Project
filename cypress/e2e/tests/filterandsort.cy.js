@@ -58,7 +58,7 @@ it('Should sort product list from Z to A', () => {
     })
 
 
-		it.only('Should sort product list by price from high to low', () => {
+		it('Should sort product list by price from high to low', () => {
 
 			// Login with valid credentials
 			cy.get(Authentication.signInRegisterBtn).should('be.visible')
@@ -70,13 +70,17 @@ it('Should sort product list from Z to A', () => {
 			   cy.wait(3000)
 			cy.get(Sort.sortOptions).select('High to low')
 			   cy.wait(1000)
-			var priceList = ['$2000','$1000', '$680', '$550', '$320', '$234', '$50', '$44', '$40', '$30', '$28', '$24', '$20', '$20', '$20', '$20', '$20', '$20', '$20', '$17', '$15', '$15']
 
-      priceList.sort()
-      cy.get(Sort.priceList).each(($elem, index) => {
+			var priceList = [2000,1000, 680, 550, 320, 234, 50, 44, 40, 30, 28, 24, 20, 20, 20, 20, 20, 20, 20, 17, 15, 15]
 
-            expect($elem.text()).equal(priceList[index])
-        })
+      priceList.sort(function(a, b) {
+				return b - a;
+				});
+					cy.wait(1000)
+
+					cy.get(Sort.priceList).each(($elem, index) => {
+							expect(parseInt($elem.text().replace('$',''))).equal(priceList[index])
+					})
 
     })
 

@@ -8,10 +8,6 @@ class Search{
 	get resetBtn () { return ('#reset')}
 	get allProducts () { return (' [class="chakra-text css-1n64n71"]')}
 
-
-
 }
-
-
 
 export default new Search()

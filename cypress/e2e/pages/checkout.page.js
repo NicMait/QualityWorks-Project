@@ -25,7 +25,7 @@ class Checkout{
 
 
 
-  checkOut(){
+  billingInfo(){
       cy.get(this.fullName).type('Martin Odegaard')
 			cy.get(this.emailAddress).type('marsenal2@yopmail.com')
 			cy.get(this.streetAddress).type('Gokasho')

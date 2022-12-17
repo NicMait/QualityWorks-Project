@@ -7,8 +7,9 @@ class Details{
 	get relatedProductName () { return ('div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1)')}
 	get productDescription () { return ('div:nth-child(2) >p:nth-child(2)')}
 	get productIncrease () { return ('#product-increase')}
- get addToCart()
-
+	get sweaterAddToCart () { return ('#add-to-cart')}
+  get sweaterHeader () { return ('ul:nth-child(1) > li:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(2)')}
+	get sweaterQty () { return ('[class="snipcart__font--secondary snipcart__font--regular"]')}
 
 
 

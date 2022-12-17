@@ -1,5 +1,6 @@
 import Authentication from '../pages/authentication.page'
 import Details from '../pages/details.page'
+import AddToCart from '../pages/addtocart.page'
 
 
 describe('Product Details', () => {
@@ -7,7 +8,7 @@ describe('Product Details', () => {
 			cy.visit('/')
 		})
 
-	it.only('Navigate to a related product', () => {
+	it('Navigate to a related product', () => {
 			// Login with valid credentials
       cy.get(Authentication.signInRegisterBtn).should('be.visible')
 			cy.get(Authentication.signInRegisterBtn).click()
@@ -70,7 +71,20 @@ describe('Product Details', () => {
 
 		 //Increase product quantity
 		 cy.get(Details.productIncrease).click()
-		 cy
+		 cy.get(Details.productIncrease).click()
+		 cy.get(Details.productIncrease).click()
+
+		 //Add item to cart
+    cy.get(Details.sweaterAddToCart).click()
+		cy.get(AddToCart.cartSummary).should('be.visible')
+	  cy.get(AddToCart.cartSummary).should('have.text',' Cart summary ')
+		cy.get(Details.sweaterHeader).should('be.visible')
+		cy.get(Details.sweaterHeader).should('have.text', " Quality Sweatshirt ")
+		cy.get(Details.sweaterQty).should('have.text',"4")
+
+
+
+
 
    })
 

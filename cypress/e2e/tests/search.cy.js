@@ -10,9 +10,10 @@ describe('Search', () => {
 	it('Should return exact results for a full name search', () => {
 
 			// Login with valid credentials
-			cy.get('#signInOrRegister').should('be.visible')
-			cy.get('#signInOrRegister').click()
+			cy.get(Authentication.signInRegisterBtn).should('be.visible')
+			cy.get(Authentication.signInRegisterBtn).click()
       Authentication.login('marsenal2@yopmail.com', 'Password123!')
+			cy.url().should('contain', 'products')
 
 			//Search for the product "Red Couch"
 
@@ -20,16 +21,16 @@ describe('Search', () => {
 			cy.get(Search.redCouch).should('be.visible')
 			cy.get(Search.redCouch).should('have.text','Red Couch')
 
-		
    })
 
 
 	it('Should return correct results for a partial name search', () => {
 
 		// Login with valid credentials
-		cy.get('#signInOrRegister').should('be.visible')
-		cy.get('#signInOrRegister').click()
-		Authentication.login('marsenal2@yopmail.com', 'Password123!')
+		cy.get(Authentication.signInRegisterBtn).should('be.visible')
+		cy.get(Authentication.signInRegisterBtn).click()
+    Authentication.login('marsenal2@yopmail.com', 'Password123!')
+		cy.url().should('contain', 'products')
 
 		//Search for "pants"
 
@@ -40,12 +41,13 @@ describe('Search', () => {
 
   })
 
-	it.only('Should reset the search filter', () => {
+	it('Should reset the search filter', () => {
 
 		// Login with valid credentials
-		cy.get('#signInOrRegister').should('be.visible')
-		cy.get('#signInOrRegister').click()
+		cy.get(Authentication.signInRegisterBtn).should('be.visible')
+		cy.get(Authentication.signInRegisterBtn).click()
 		Authentication.login('marsenal2@yopmail.com', 'Password123!')
+		cy.url().should('contain', 'products')
 
 		//Search for "Red Couch"
     cy.get(Search.searchBar).type('Red Couch')

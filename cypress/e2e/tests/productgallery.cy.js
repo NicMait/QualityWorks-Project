@@ -13,9 +13,10 @@ describe('Add To Cart', () => {
 	it('View Product Details', () => {
 
 			// Login with valid credentials
-			cy.get('#signInOrRegister').should('be.visible')
-			cy.get('#signInOrRegister').click()
+			cy.get(Authentication.signInRegisterBtn).should('be.visible')
+			cy.get(Authentication.signInRegisterBtn).click()
       Authentication.login('marsenal2@yopmail.com', 'Password123!')
+			cy.url().should('contain', 'products')
 
 			//View product details
 		  cy.get(Gallery.vneckDetails).click()
@@ -24,12 +25,13 @@ describe('Add To Cart', () => {
 
 })
 
-it('Should increase the quantity of a product', () => {
+it.only('Should increase the quantity of a product', () => {
 
 	// Login with valid credentials
-	cy.get('#signInOrRegister').should('be.visible')
-	cy.get('#signInOrRegister').click()
-	Authentication.login('marsenal2@yopmail.com', 'Password123!')
+	cy.get(Authentication.signInRegisterBtn).should('be.visible')
+	cy.get(Authentication.signInRegisterBtn).click()
+  Authentication.login('marsenal2@yopmail.com', 'Password123!')
+	cy.url().should('contain', 'products')
 
 	//Increase the quantity of a product
   cy.get(Gallery.productIncrease).should('be.visible')
@@ -45,16 +47,13 @@ it('Should increase the quantity of a product', () => {
 	cy.get(Gallery.cartQuantity).should('have.text'," 2 ")
 })
 
-<<<<<<< HEAD
 it ('Should sign out from the product gallery page', () => {
-=======
-it.only('Sign out from the home page', () => {
->>>>>>> 5d1f561c508612563ff0ac9bcf32696937712442
 
 	// Login with valid credentials
-	cy.get('#signInOrRegister').should('be.visible')
-	cy.get('#signInOrRegister').click()
-	Authentication.login('marsenal2@yopmail.com', 'Password123!')
+	cy.get(Authentication.signInRegisterBtn).should('be.visible')
+	cy.get(Authentication.signInRegisterBtn).click()
+  Authentication.login('marsenal2@yopmail.com', 'Password123!')
+	cy.url().should('contain', 'products')
 
 	//Sign out from the home page/product gallery
   cy.get(Gallery.logOut).should('be.visible')
@@ -63,4 +62,5 @@ it.only('Sign out from the home page', () => {
 
 
   })
+
 })
